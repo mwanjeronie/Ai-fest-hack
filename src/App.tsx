@@ -1,36 +1,34 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Globe, Users, BookOpen, Wifi, WifiOff, Download } from "lucide-react"
-import Image from "next/image"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-     
+      {/* Header */}
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+          <a href="/" className="flex items-center gap-2 font-bold text-xl">
             <Globe className="h-6 w-6" />
             <span>3D Learn & Create</span>
-          </Link>
+          </a>
           <nav className="hidden md:flex gap-6">
-            <Link href="#features" className="text-sm font-medium hover:underline underline-offset-4">
+            <a href="#features" className="text-sm font-medium hover:underline underline-offset-4">
               Features
-            </Link>
-            <Link href="#education" className="text-sm font-medium hover:underline underline-offset-4">
+            </a>
+            <a href="#education" className="text-sm font-medium hover:underline underline-offset-4">
               Education
-            </Link>
-            <Link href="#collaboration" className="text-sm font-medium hover:underline underline-offset-4">
+            </a>
+            <a href="#collaboration" className="text-sm font-medium hover:underline underline-offset-4">
               Collaboration
-            </Link>
+            </a>
           </nav>
           <div className="flex gap-4">
-            <Link href="/login">
+            <a href="/login">
               <Button variant="outline">Log In</Button>
-            </Link>
-            <Link href="/signup">
+            </a>
+            <a href="/signup">
               <Button>Sign Up</Button>
-            </Link>
+            </a>
           </div>
         </div>
       </header>
@@ -50,28 +48,28 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href="/explore">
+                <a href="/explore">
                   <Button size="lg" className="gap-1">
                     <BookOpen className="h-4 w-4" />
                     Explore 3D Assets
                   </Button>
-                </Link>
-                <Link href="/signup">
+                </a>
+                <a href="/signup">
                   <Button size="lg" variant="outline" className="gap-1">
                     <Users className="h-4 w-4" />
                     Join Community
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[500px] aspect-square">
-                <Image
+                <img
                   src="/placeholder.svg?height=500&width=500"
                   alt="3D educational platform visualization"
                   width={500}
                   height={500}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover w-full h-full"
                 />
               </div>
             </div>
@@ -217,18 +215,18 @@ export default function Home() {
                 </li>
               </ul>
               <div>
-                <Link href="/education">
+                <a href="/education">
                   <Button>Explore Educational Content</Button>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last">
-              <Image
+              <img
                 src="/placeholder.svg?height=310&width=550"
                 width={550}
                 height={310}
                 alt="3D educational content example"
-                className="rounded-lg"
+                className="rounded-lg w-full h-full object-cover"
               />
             </div>
           </div>
@@ -240,12 +238,12 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[500px_1fr] lg:gap-12 xl:grid-cols-[550px_1fr] items-center">
             <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full">
-              <Image
+              <img
                 src="/placeholder.svg?height=310&width=550"
                 width={550}
                 height={310}
                 alt="3D artist collaboration tools"
-                className="rounded-lg"
+                className="rounded-lg w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">
@@ -315,9 +313,9 @@ export default function Home() {
                 </li>
               </ul>
               <div>
-                <Link href="/collaboration">
+                <a href="/collaboration">
                   <Button>Start Collaborating</Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -337,12 +335,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/signup">
+              <a href="/signup">
                 <Button size="lg" variant="secondary">
                   Get Started for Free
                 </Button>
-              </Link>
-              <Link href="/contact">
+              </a>
+              <a href="/contact">
                 <Button
                   size="lg"
                   variant="outline"
@@ -350,7 +348,7 @@ export default function Home() {
                 >
                   Contact Us
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -364,24 +362,24 @@ export default function Home() {
               <h3 className="text-lg font-medium">Platform</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/features" className="text-sm hover:underline">
+                  <a href="/features" className="text-sm hover:underline">
                     Features
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/pricing" className="text-sm hover:underline">
+                  <a href="/pricing" className="text-sm hover:underline">
                     Pricing
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/education" className="text-sm hover:underline">
+                  <a href="/education" className="text-sm hover:underline">
                     Education
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/collaboration" className="text-sm hover:underline">
+                  <a href="/collaboration" className="text-sm hover:underline">
                     Collaboration
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -389,24 +387,24 @@ export default function Home() {
               <h3 className="text-lg font-medium">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/docs" className="text-sm hover:underline">
+                  <a href="/docs" className="text-sm hover:underline">
                     Documentation
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/tutorials" className="text-sm hover:underline">
+                  <a href="/tutorials" className="text-sm hover:underline">
                     Tutorials
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/blog" className="text-sm hover:underline">
+                  <a href="/blog" className="text-sm hover:underline">
                     Blog
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/community" className="text-sm hover:underline">
+                  <a href="/community" className="text-sm hover:underline">
                     Community
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -414,24 +412,24 @@ export default function Home() {
               <h3 className="text-lg font-medium">Company</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/about" className="text-sm hover:underline">
+                  <a href="/about" className="text-sm hover:underline">
                     About Us
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/careers" className="text-sm hover:underline">
+                  <a href="/careers" className="text-sm hover:underline">
                     Careers
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-sm hover:underline">
+                  <a href="/contact" className="text-sm hover:underline">
                     Contact
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/partners" className="text-sm hover:underline">
+                  <a href="/partners" className="text-sm hover:underline">
                     Partners
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -439,24 +437,24 @@ export default function Home() {
               <h3 className="text-lg font-medium">Legal</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/privacy" className="text-sm hover:underline">
+                  <a href="/privacy" className="text-sm hover:underline">
                     Privacy Policy
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-sm hover:underline">
+                  <a href="/terms" className="text-sm hover:underline">
                     Terms of Service
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/cookies" className="text-sm hover:underline">
+                  <a href="/cookies" className="text-sm hover:underline">
                     Cookie Policy
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/licenses" className="text-sm hover:underline">
+                  <a href="/licenses" className="text-sm hover:underline">
                     Licenses
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
